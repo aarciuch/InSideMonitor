@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstFragment">
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="art.pum.insidemonitor.FirstFragment"
+        android:label="FirstFragment"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_firstFragment_to_counterFragment"
+            app:destination="@id/counterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/counterFragment"
+        android:name="art.pum.insidemonitor.CounterFragment"
+        android:label="CounterFragment"
+        tools:layout="@layout/fragment_counter">
+        <argument
+            android:name="s1"
+            app:argType="string"
+            android:defaultValue="0" />
+        <argument
+            android:name="s2"
+            app:argType="string"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
